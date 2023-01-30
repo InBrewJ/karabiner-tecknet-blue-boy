@@ -134,7 +134,6 @@
             "description": "Euro sign on alt+4",
             "manipulators": [
               {
-                "type": "basic",
                 "from": {
                   "key_code": "4",
                   "modifiers": {
@@ -146,7 +145,8 @@
                     "key_code": "2",
                     "modifiers": ["left_option", "left_shift"]
                   }
-                ]
+                ],
+                "type": "basic"
               }
             ]
           },
@@ -154,7 +154,6 @@
             "description": "Pipe on shift backslash",
             "manipulators": [
               {
-                "type": "basic",
                 "from": {
                   "key_code": "non_us_backslash",
                   "modifiers": {
@@ -165,6 +164,27 @@
                   {
                     "key_code": "backslash",
                     "modifiers": ["left_shift"]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "control + non_us_backslash => control + backslash",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "non_us_backslash",
+                  "modifiers": {
+                    "mandatory": ["left_control"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "backslash",
+                    "modifiers": ["left_control"]
                   }
                 ]
               }
